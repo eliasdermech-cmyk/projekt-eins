@@ -1,0 +1,171 @@
+body {
+    background: linear-gradient(135deg, #fff0f5, #fce4ec, #fff8e7);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.willkommen {
+    background-color: white;
+    padding: 30px;
+    margin: 40px auto;
+    width: 500px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.frage {
+    background-color: white;
+    padding: 30px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.ja-button {
+    background-color: #ffb6c1;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.ja-button:hover {
+    transform: scale(1.1);
+    background-color: #ff9eb0;
+}
+
+.nein-button {
+    background-color: #eeeeee;
+    transition: 0.2s;
+}
+
+.erfolg {
+    display: none;
+    background-color: white;
+    padding: 30px;
+    margin: 40px auto;
+    width: 400px;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.erfolg h1 {
+    color: #ff6f9f;
+    font-size: 40px;
+}
+
+.zeit-antwort {
+    width: 80%;
+    height: 100px;
+    padding: 15px;
+    border: 2px solid #ffc0cb;
+    border-radius: 15px;
+    font-size: 16px;
+    resize: none;
+}
+
+.abschicken-button {
+    background-color: #ffb6c1;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.abschicken-button:hover {
+    transform: scale(1.1);
+    background-color: #ff9eb0;
+}
+
+.deko {
+    position: fixed;
+    font-size: 30px;
+    opacity: 0.5;
+    z-index: -1;
+    animation: schweben 4s ease-in-out infinite;
+}
+
+.deko1 {
+    top: 10%;
+    left: 10%;
+}
+
+.deko2 {
+    top: 20%;
+    right: 12%;
+}
+
+.deko3 {
+    bottom: 15%;
+    left: 8%;
+}
+
+.deko4 {
+    bottom: 10%;
+    right: 10%;
+}
+
+.deko5 {
+    top: 50%;
+    right: 5%;
+}
+
+@keyframes schweben {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.konfetti {
+    position: fixed;
+    top: -50px;
+    z-index: 1000;
+    pointer-events: none;
+    animation-name: fallen;
+    animation-timing-function: linear;
+}
+
+@keyframes fallen {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .willkommen,
+    .frage,
+    .erfolg {
+        width: 80%;
+    }
+
+    .willkommen {
+        border-radius: 30px;
+    }
+
+    .erfolg h1 {
+        font-size: 32px;
+    }
+}
