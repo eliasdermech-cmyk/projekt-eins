@@ -44,7 +44,7 @@ const spotifyBereich =
 */
 
 const FORMULAR_URL =
-    "https://formspree.io/f/xoeqlgdo";
+    "https://formspree.io/f/xoeqlgdo"
 
 
 /* ------------------------------
@@ -546,7 +546,7 @@ formular.addEventListener(
 
         if (
             FORMULAR_URL ===
-            "https://formspree.io/f/xoeqlgdo"
+            "DEINE_FORMSPREE_URL"
         ) {
 
             formularStatus.textContent =
